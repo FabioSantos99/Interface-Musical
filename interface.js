@@ -3,14 +3,14 @@ const dogs = {
     songName: 'Dogs',
     artist: 'Pink Froyd',
     album: 'Animals',
-    coverFile: 'pink-floyd.jpg'
+    coverFile: 'Pink_Floyd-Animals.jpg'
 };
-const theBetterIdea = {
+const jumCelestino = {
     id: '1',
     songName: 'Jumento Celestino',
     artist: 'MAm',
     album: 'boys and crys',
-    coverFile: 'art-wall1.jpg'
+    coverFile: 'Cd_Rom_Mamonas.jpg'
 }; 
 
 const liveforever = {
@@ -18,15 +18,15 @@ const liveforever = {
     songName: 'live forever',
     artist:'Oasis',
     album: 'Definitely maybe',
-    coverFile: 'album.jpg'
+    coverFile: '7620.webp'
 };
 
-const aYouAreNothing = {
+const sonicYouth = {
     id: '3',
-    songName: 'You are Nothing',
+    songName: 'Superstar',
     artist: "Sonic Youth",
-    album: "ron",
-    coverFile: 'images.jpg'
+    album: "Carpenters",
+    coverFile: 'superstar.jpg'
 };
 
 const deadKennedys = {
@@ -34,7 +34,7 @@ const deadKennedys = {
     songName: 'Holiday in Cambodja',
     artist: 'Dead Kennedys',
     album: 'Cambodja',
-    coverFile: 'retro1.jpg'
+    coverFile: 'album_DK.webp'
 };
 
 const cantHide = {
@@ -42,22 +42,23 @@ const cantHide = {
     songName: 'Cant Hide',
     artist: 'Otis McDonald',
     album: 'Otis McDonald',
-    coverFile: 'vinil-disco.jpg',
+    coverFile: 'retro1.jpg',
 };
 
 const musicLibrary = [
     dogs, 
-    theBetterIdea, 
+    jumCelestino, 
     liveforever, 
-    aYouAreNothing, 
+    sonicYouth, 
     deadKennedys, 
     cantHide,
 ];
 
 let songs = [...musicLibrary];
 
-let playlist = JSON.parse(localStorage.getItem('playlist')) ?? [   dogs, 
-    theBetterIdea, 
+let playlist = JSON.parse(localStorage.getItem('playlist')) ?? [   dogs,
+    sonicYouth,
+    jumCelestino, 
     liveforever,
     cantHide,];
 
@@ -74,7 +75,7 @@ function loadLibrary(){
     for(let index = 0; index < musicLibrary.length; index++) {
         pageBody.innerHTML +=
          `<div class="card d-flex d-flex-column align-items-center" style="width: 18rem; height: 30rem">
-        <img src="/images/${songs[index].coverFile}" class="card-img-top" alt="...">
+        <img src="/img/${songs[index].coverFile}" class="card-img-top" alt="...">
         <div class="card-body d-flex flex-column">
           <h5 class="card-title">${songs[index].songName}</h5>
           <p class="card-text">${songs[index].album}</p>
