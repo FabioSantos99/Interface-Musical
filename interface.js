@@ -75,7 +75,7 @@ function loadLibrary(){
     for(let index = 0; index < musicLibrary.length; index++) {
         pageBody.innerHTML +=
          `<div class="card d-flex d-flex-column align-items-center" style="width: 18rem; height: 30rem">
-        <img src="/img/${songs[index].coverFile}" class="card-img-top" alt="...">
+        <img src="public/${songs[index].coverFile}" class="card-img-top" alt="...">
         <div class="card-body d-flex flex-column">
           <h5 class="card-title">${songs[index].songName}</h5>
           <p class="card-text">${songs[index].album}</p>
